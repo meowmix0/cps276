@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Assignment 1</title>
+</head>
+<body class="container">
+  <form>
+    <p></p>
+    <div class="row">
+  <div class="col">
+    <label for="firstName" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="firstName" aria-label="First name"required>
+  </div>
+  <div class="col">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastName" aria-label="Last name"required>
+  </div>
+</div>
+<p>
+</p>
+<div class="mb-3">
+  <label for="address" class="form-label">Address</label>
+<input type="text" class="form-control" id="address" required>
+</div>
+   <div class="row">
+  <div class="col">
+    <label for="city" class="form-label">City</label>
+    <input type="text" class="form-control" id="city" required>
+  </div>
+  <div class="col">
+    <label for="state" class="form-label">State</label>
+    <select class="form-select" aria-label="Default select example">
+  <option value="1">Arkansas</option>
+  <option value="2">California</option>
+  <option value="3" selected>Michigan</option>
+  <option value="4">Nebraska</option>
+  <option value="5">Ohio</option>
+</select>
+  </div>
+    <div class="col">
+    <label for="zip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="zip" required>
+  </div>
+</div>
+<div class="mb-3">
+  <label for="email" class="form-label">Email Address</label>
+  <input type="email" class="form-control" id="email" required>
+</div>
+<label class="form-label">Preferred method of contact</label>
+<p></p>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="contactMethod" id="emailContact" value="email" required>
+  <label class="form-check-label" for="emailContact">Email</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="contactMethod" id="textContact" value="text" required>
+  <label class="form-check-label" for="textContact">Text</label>
+</div>
+<div class="row mt-3">
+  <div class="col-12">
+  <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</div>
+<!-- Question 1: Why must every label for match an input (or select) id? What happens if they do not match? The for attribute for is linked to the ID so if they don't match clicking the label does nothing and makes the page less accessible-->
+
+<!-- Question 2: Why do the preferred-contact radio buttons share the same name? What would happen if they had different names? Radio buttons share the same name so the user can only select one option, if they had different names the user would be allowed to select both phone and text as preferred contact type which makes the question redundant.-->
+
+<!-- Question 3: What does a browser required attribute do, and why will PHP still need to validate later? A required attribute stops a user from submitting an unanswered form. It forces the user to fill out the field before submitting the form. PHP validation is still needed since it provides additional security checks so if a user edits the page is able to send the form without the required  check then PHP will check the data itself once the submission is received and sends a resposne that the data is missing. -->
+
+<!-- Question 4: Why group related controls (name fields together, address fields together) instead of one long list of inputs? When fields are grouped together it's easier to fill and makes the website more userfriendly. Users want to get on the web and complete a form as quickly and precisely as possible. -->
+
+<!-- Question 5: When would you use GET vs POST for a form? Why is POST a better default for this contact form once PHP is added? Post is for secured information so if a user is entering their personal information in a form you don't want a hacker to be able to grab that data. Get is for non secure/sensitive information like search boxes.-->
+
+</form>
+</body>
+</html>
