@@ -56,6 +56,11 @@ $table = createTable(8, 6);
 
 2. Beyond simply finding even numbers, describe a scenario where you would use a similar foreach loop with a conditional (if) statement to filter or process elements from an array based on different criteria like finding all numbers divisiable by 7.
 Another use would be using a foreach loop to get details about a price list then a supplier might send for their products.  
+$seven = array();
+for ($i = 1; $i <= 50; $i++) {
+    if ($i % 7 == 0) {
+    $seven[] = $i;
+    }
 
 3. Explain when heredoc is useful for creating a multi-line PHP string such as the form in this assignment. How does heredoc allow you to write multiple lines of text and include variables in the string?
 Heredoc lets you write HTML across multiple lines as one string without quotes and it still lets you use variables within the string.
