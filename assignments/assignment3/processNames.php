@@ -38,8 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $form = <<<HTML
-<!doctype html>
-<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Add Names</title>
@@ -77,7 +75,7 @@ The reason we seperate the files is to keep the form display blank and store the
 2. How does the $_SERVER["REQUEST_METHOD"] variable help determine when to process form submissions in PHP?
 The variable tells PHP that the form was submitted using post and to continue the process.
 3. How does PHP handle string-to-array conversion using the explode function, and why is this useful in this application?
-PHP uses explode to break a string into an array from where the space was entered. This way we can use the array to easily sort alphabetically.
+PHP uses explode to break a string into an array from where the space was entered. This way we can use the array to easily sort alphabetically and by splitting the names in two parts.
 4. What role does the implode function play in formatting the output for the textarea?
 The implode function converts the array into a string which can be displayed in the order you coded within the text area.
 5. How does processNames.php determine whether to add a new name or clear all names based on which button was clicked?
