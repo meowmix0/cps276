@@ -47,6 +47,6 @@
 
 
 5. In the fileUploadProc.php, the code uses prepared statements with bindings. Explain how this approach prevents SQL injection attacks and why it's considered a security best practice.
-When you use prepared statements with bindings, the sql query is compliuled first and prevents sql injection attacks. -->
+When you use prepared statements with bindings, the sql query is compiled first and prevents sql injection attacks. -->
 
  
