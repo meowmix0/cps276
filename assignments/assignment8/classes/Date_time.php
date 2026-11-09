@@ -130,16 +130,10 @@ class Date_time
                 (int) $record['date_time']
             );
 
-            $safeNote = htmlspecialchars(
-                $record['note'],
-                ENT_QUOTES,
-                'UTF-8'
-            );
-
             $output .= '
                 <tr>
                     <td>' . $formattedDate . '</td>
-                    <td>' . nl2br($safeNote) . '</td>
+                    <td>' . htmlspecialchars($record['note']) . '</td>
                 </tr>
             ';
         }
@@ -156,7 +150,7 @@ class Date_time
     {
         return '
             <div class="alert alert-' . $type . '" role="alert">
-                ' . htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . '
+                ' . htmlspecialchars($message) . '
             </div>
         ';
     }

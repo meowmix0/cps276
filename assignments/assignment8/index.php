@@ -46,7 +46,7 @@ $notes = $dt->checkSubmit();
 
 <!-- 
 1. Why store a timestamp or standard format instead of a display string?
-    We should store a timestand or standard format instead of a display string because a timestamp is easier for a database to use and it follows ISO-8601 standards.
+    We should store a timestamp or standard format instead of a display string because a timestamp is easier for a database to use and it follows ISO-8601 standards.
 2. Why put date work in a class?
     We should put date work in a class because it's easier to manage and allows us to reuse the code without duplicating.
 3. How does the app show only notes in a requested range?
