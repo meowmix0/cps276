@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 9 - CPS276 Gradebook</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+  <h1>CPS276 Gradebook</h1>
+  <p>This page loads <code>app.js</code>. Open the browser console (F12) to see the gradebook report.</p>
+  <p>Reload the page after you change the JavaScript file.</p>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!---
+1. Why did you write letterGrade as a function instead of copying the same if / else for every student?
+LetterGrade was written as a function because if it wasn't then we would be rewriting the same statement for every student. Creating it as a function allows for code reuse and makes it easier to maintain.
+
+2. What is the difference between const and let? Where did you use each in this assignment, and why?
+Const is used to declare variables that can't be reassigned and let is used to delcare variables that can be rassigned. I used const for the student arrays because they will not be reassigned and I used let for the loop since we need to reassign the value of the loop variable for each iteration.
+
+3. Why does this course prefer === over ==? Give a short example of how == can surprise you.
+=== checks for both equal value and equal type and == just checks for equal value. If we make 5 == "5" it will return true because the values are equal but the types are different. If we use 5 === "5" it will return false because the types are different. This can surprise you if you are expecting the two values to be equal but they are not of the same type.
+
+4. In passingNames, explain what filter, map, and join each do to the student list. 
+Filter takes the student list and filters it down to only students that have a 70 or higher. Map takes the filtered list and creates a new array with the name of the students. Join takes the new array and joins the names together into a single string with a comma and space between each name.
+.filter((student) => student.score >= 70)
+.map((student) => student.name)
+.join(", ");
+
+5. Why is this assignment console-only? What will Chapter 12 add? Why would you still not store real course grades only in JavaScript?
+This assignment is console only since we are working on the javascript portion of the assignment. We will learn how to connect javascipt to PHP next class. We would not store real course grades in javascript because it is client side and can be easily manipulated by the user. We would want to store real course grades in a database on the server side where it is more secure.
+
+
+-->
